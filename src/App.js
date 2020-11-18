@@ -6,8 +6,8 @@ import Favorites from "./Containers/Favorites.js";
 
 class App extends React.Component {
 
-  appClickHandler = () => {
-    console.log("clicked")
+  appClickHandler = (beyObj) => {
+    console.log(beyObj)
   }
 
   render() {
