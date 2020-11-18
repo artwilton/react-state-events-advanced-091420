@@ -6,8 +6,13 @@ import Favorites from "./Containers/Favorites.js";
 
 class App extends React.Component {
 
+  state = {
+    bey: {}
+  }
+
   appClickHandler = (beyObj) => {
-    console.log(beyObj)
+    this.setState({bey: beyObj}, console.log('beyObj'))
+    // beyObj.favorite = true
   }
 
   render() {
@@ -15,7 +20,7 @@ class App extends React.Component {
     return (
       <div className="container" >
         <BeyContainer appClickHandler={this.appClickHandler}/>
-        <Favorites/>
+        <Favorites bey={this.state.bey}/>
       </div>
     
     );
