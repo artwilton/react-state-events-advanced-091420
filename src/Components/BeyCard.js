@@ -11,8 +11,8 @@ class BeyCard extends React.Component {
   render() {
   return (
     <div className="card">
-      <img onClick={this.cardClickHandler} src={this.props.bey.img} alt={this.props.bey.name}/>
-      <h2>{this.props.name}</h2>
+      <img onClick={this.cardClickHandler} src={this.props.bey.img} alt={this.props.bey.name} />
+      <h2>{this.props.bey.name}</h2>
     </div>
     );
   }
