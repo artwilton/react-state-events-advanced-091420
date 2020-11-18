@@ -1,13 +1,26 @@
 import React from "react";
 import "./App.css";
+import BeyContainer from "./Containers/BeyContainer";
+import Favorites from "./Containers/Favorites.js";
 
-const App = () => {
 
-  return (
-    <div className="container" >
+class App extends React.Component {
 
-    </div>
-  );
-};
+  appClickHandler = () => {
+    console.log("clicked")
+  }
+
+  render() {
+
+    return (
+      <div className="container" >
+        <BeyContainer appClickHandler={this.appClickHandler}/>
+        <Favorites/>
+      </div>
+    
+    );
+  }
+
+}
 
 export default App;
